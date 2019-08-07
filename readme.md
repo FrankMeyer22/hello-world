@@ -51,9 +51,7 @@ You can find all the UCI (with the tabular format) on this link. We provide also
 Just unzip the files on your disk.
 
 
-
----------------------------------
-INSTALLATION OF SOURCE CODE
+## INSTALLATION OF SOURCE CODE
 
 The code is an export of an Eclipse project (version Photon).
 You should use Eclipse to import the project, it should be easier to work on it.
@@ -75,7 +73,7 @@ On Linux, install the datasets in a directory on your disk
 and then adapt the path directory in the sources Bench_UCI.java and Bench_XML.java if you want to use CraftML from Eclipse and run the benchmark.
 
 ----------------------------------
-##USING CraftML From Eclipse
+## USING CraftML From Eclipse
 
 You can run the two benchmarks in the benchmark package, just by selecting them and clicking on the run (green button) of Eclipse.
 - Bench_UCI.java will run the benchmark on various UCI mono-label datasets from the UCI reposotory (re-formated in the "tabular file format)
@@ -109,7 +107,7 @@ In this case, you can run CraftML in a command-line manner.
 
 
 ----------------------------------
-##Trademarks / Citations
+## Trademarks / Citations
 
 Java is a Trademark of Oracle Corporation. 
 Eclipse is an open source project of the Eclipse Foundation.
