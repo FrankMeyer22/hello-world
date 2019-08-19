@@ -8,7 +8,7 @@ CRAFTML, an Efficient Clustering-based Random Forest for Extreme Multi-label Lea
 In : International Conference on Machine Learning. 2018. p. 4671-4680.
 
 The original java-implementation of CRAFTML, an Efficient Clustering-based Random Forest for Extreme Multi-label Learning (Siblini et al., 2018).
-Note that there exists another implementation done in RUST by TomTung, also available on github. It is also a good one!
+Note that there exists another implementation done in RUST by TomTung, also available on github (https://github.com/tomtung/craftml-rs). It is also a good one!
 
 
 ----------------------------------
@@ -24,9 +24,10 @@ An example of config file is given in the main directory of this project: config
 Comment / decomment the line of a given action configuration to run it.
 
 To run CraftML just type:
-java -jar craftML01.jar config_API_CRAFTML.txt             (the config file should be in the same directory as the jar file)
+java -jar craftML01.jar config_API_CRAFTML.txt
+(the config file should be in the same directory as the jar file)
 To run craftML for with XML (Extrem Multi label) data, you should use the -Xmx -Xms option to ask for more RAM
-for instance if you can ask 32Gb of RAM, you can use: java -Xms32g -XMX32g -jar craftML01.jar c:\OpenCraftML2019\config_API_CRAFTML.txt
+For instance if you can ask 32Gb of RAM, you can use: java -Xms32g -XMX32g -jar craftML01.jar c:\OpenCraftML2019\config_API_CRAFTML.txt
 (it is assumed that the project has been installed on C:/openCraftML2019/... )
 
 ### by the command-line 
@@ -124,9 +125,5 @@ Java is a Trademark of Oracle Corporation.
 Eclipse is an open source project of the Eclipse Foundation.
 The datasets of the UCI benchmark are adapted from the UCI repository: https://archive.ics.uci.edu/ml/index.php
 The datasets of the XML benchmark are from the Extrem multi label dataset repository: http://manikvarma.org/downloads/XC/XMLRepository.html
-
-
-
-
 
 
