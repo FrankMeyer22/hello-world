@@ -3,12 +3,36 @@
 This project is the original java implementation of CraftML, an efficient algorithm  Clustering-based Random Forest for Extreme multi-label Learning.
 If you use this code, please cite this paper:
 
-SIBLINI, Wissam, MEYER, Frank, et KUNTZ, Pascale. 
+SIBLINI, Wissam, MEYER, Frank, & KUNTZ, Pascale. 
 CRAFTML, an Efficient Clustering-based Random Forest for Extreme Multi-label Learning. 
 In : International Conference on Machine Learning. 2018. p. 4671-4680.
 
 The original java-implementation of CRAFTML, an Efficient Clustering-based Random Forest for Extreme Multi-label Learning (Siblini et al., 2018).
 Note that there exists another implementation done in RUST by TomTung, also available on github. It is also a good one!
+
+
+----------------------------------
+## USING THE JAR program 
+
+### with the config file
+Using the config file should be the easiest way to use CraftML, we recommand this option.
+The jar program provided as example is compiled with the CratML_API main entry, to it is to be used via a config file.
+You will need to have Java installed on your PC (version 1.8 or later).
+You will need to install the datasets (see the section "To obtain the data"
+You will need to prepare a config file.
+An example of config file is given in the main directory of this project: config_API_CRAFTML.txt
+Comment / decomment the line of a given action configuration to run it.
+
+To run CraftML just type:
+java -jar craftML01.jar config_API_CRAFTML.txt             (the config file should be in the same directory as the jar file)
+To run craftML for with XML (Extrem Multi label) data, you should use the -Xmx -Xms option to ask for more RAM
+for instance if you can ask 32Gb of RAM, you can use: java -Xms32g -XMX32g -jar craftML01.jar c:\OpenCraftML2019\config_API_CRAFTML.txt
+(it is assumed that the project has been installed on C:/openCraftML2019/... )
+
+### by the command-line 
+On Eclipse you can generate a jar program, using the CraftML.java entry.
+In this case, you can run CraftML in a command-line manner.
+
 
 ## Data 
 
@@ -23,9 +47,9 @@ label1,label2,...labelk ft1:ft1_val ft2:ft2_val ft3:ft3_val .. ftd:ftd_val
 ```
 For each dataset you have a train file and a test file.
 
-An example of extrem multi label dataset is given with eurlex4k (see in the subdirectory of data_XML)
+An example of extreme multi label dataset is given with eurlex4k (see in the subdirectory of data_XML_ShortExample)
 
-Note that you will need 32+ Go of RAM to run CraftML on the biggest dataset.
+Note that you will need 32+ Go of RAM to run CraftML on the biggest datasets.
 
 To reproduce the result in the orgininal paper, use the default setting of the confilg file given in example.
 (use a branch factor of 10, 50 trees, max of 10 instances per leaf, etc...)
@@ -40,15 +64,17 @@ Note that any value not parsable as an number is transformed by a concatenation 
 Example: on IRIS_train1.txt, for the target variable "class", the value of the 1st record is "setosa" an then it is parsed by CraftML as class_setosa=1
 With this trick, CraftML can handle symbolic values.
 
-An example of UCI dataset is given with Iris (see in the subdirectory of data_UCI)
+An example of UCI dataset is given with Iris (see in the subdirectory of data_UCI_ShortExample)
 
 
-## to obtaint the data
+## To obtain the data
 
 To reduce the size of this project, only one multi-label (libsvm format) and one mono-label (tabular format) are given (Eurlex and IRIS respectively).
 You can find all the extrem multi-label data on the [Extreme Classification Repository](http://manikvarma.org/downloads/XC/XMLRepository.html).
-You can find all the UCI (with the tabular format) on this link. We provide also a copy of the extrem multi-label data.
-Just unzip the files on your disk.
+You can find all the UCI (with the tabular format) on this link. 
+We provide also a copy of the extrem multi-label data (with the subdirectory hierarchy compliant with the benchmarks).
+Unzip the files on your disk.
+On Windows, unzip on c:/data_UCI and c:/data_XML respectively to be able to run the benchmarks directly from the config file given in example.
 
 
 ## INSTALLATION OF SOURCE CODE
@@ -76,9 +102,9 @@ and then adapt the path directory in the sources Bench_UCI.java and Bench_XML.ja
 ## USING CraftML From Eclipse
 
 You can run the two benchmarks in the benchmark package, just by selecting them and clicking on the run (green button) of Eclipse.
-- Bench_UCI.java will run the benchmark on various UCI mono-label datasets from the UCI reposotory (re-formated in the "tabular file format)
+- Bench_UCI.java will run the benchmark on various UCI mono-label datasets from the UCI repository (re-formated in the "tabular file format)
 - Bench_XML.java will run the benchmark on the extrem multi-label repository.
-You must before install the required datasets.
+You must install the required datasets before.
 If you use Windows, and if you install the datasets from THIS LINK to c:/data_UCI and c:/data_XML respectively you will be able to run all the benchmark
 without modification. Otherwise, adapt the file paths on the code of Bench_UCI.java and Bench_XML.java.
 
@@ -89,21 +115,6 @@ It is possible to generate an executable jar file
 - using CraftML.java (for a command-line usage),
 - or using CraftML_API.java (for a using it via a config file)
 
-----------------------------------
-##USING THE JAR program 
-
-### with the config file
-Using the config file should be the easiest way to use CraftML, we recommand this option.
-The jar program provided as example is compiled with the CratML_API main entry, to it is to be used via a config file.
-You just need to have Java installed on your PC (version 1.8 or later).
-You will need to prepare a config file.
-An example of config file is given in the main directory of this project: config_API_CRAFTML.txt
-Comment / decomment the line of a given action configuration to run it.
-
-### by the command-line 
-On Eclipse you can generate another jar program, but using the CraftML.java entry.
-In this case, you can run CraftML in a command-line manner.
-
 
 
 ----------------------------------
@@ -112,7 +123,9 @@ In this case, you can run CraftML in a command-line manner.
 Java is a Trademark of Oracle Corporation. 
 Eclipse is an open source project of the Eclipse Foundation.
 The datasets of the UCI benchmark are adapted from the UCI repository: https://archive.ics.uci.edu/ml/index.php
-The datasets of the XML benchmark are from the Extrem multi label dataset repository: http://manikvarma.org/downloads/XC/XMLRepository.htmle
+The datasets of the XML benchmark are from the Extrem multi label dataset repository: http://manikvarma.org/downloads/XC/XMLRepository.html
+
+
 
 
 
