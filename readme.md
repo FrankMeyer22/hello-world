@@ -1,4 +1,4 @@
-# craftml-java
+# Craftml-java
 
 This project is the original java implementation of CraftML, an efficient algorithm  Clustering-based Random Forest for Extreme multi-label Learning.
 If you use this code, please cite this paper:
