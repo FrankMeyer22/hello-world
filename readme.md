@@ -27,19 +27,21 @@ You will need to prepare a config file.
 An example of config file is given in the main directory of this project: config_API_CRAFTML.txt
 
 Comment / decomment the line of a given action configuration to run it.
-'''
+
+```
 To run CraftML just type:
 java -jar craftML01.jar config_API_CRAFTML.txt
 
 (the config file should be in the same directory as the jar file)
-'''
+```
+
 To run craftML on XML (Extreme Multi label) data, you should use the -Xmx -Xms option to ask for more RAM
 
-'''
+```
 For instance if you can ask 32Gb of RAM, you can use: 
 
 java -Xms32g -XMX32g -jar craftML01.jar c:\OpenCraftML2019\config_API_CRAFTML.txt
-'''
+```
 (it is assumed that the project has been installed on C:/openCraftML2019/... )
 
 ### by the command-line 
