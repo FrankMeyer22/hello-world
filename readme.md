@@ -1,13 +1,13 @@
 # Craftml-java
 
-This project is the original java implementation of CraftML, an efficient algorithm  Clustering-based Random Forest for Extreme multi-label Learning.
+This project is the original java implementation of CraftML, an efficient Clustering-based Random Forest for Extreme multi-label Learning.
 If you use this code, please cite this paper:
 
 SIBLINI, Wissam, MEYER, Frank, & KUNTZ, Pascale. 
 CRAFTML, an Efficient Clustering-based Random Forest for Extreme Multi-label Learning. 
 In : International Conference on Machine Learning. 2018. p. 4671-4680.
 
-The original java-implementation of CRAFTML, an Efficient Clustering-based Random Forest for Extreme Multi-label Learning (Siblini et al., 2018).
+
 Note that there exists another implementation done in RUST by TomTung, also available on github (https://github.com/tomtung/craftml-rs). It is also a good one!
 
 
@@ -20,7 +20,7 @@ The jar program provided as example is compiled with the CratML_API main entry, 
 
 You will need to have Java installed on your PC (version 1.8 or later).
 
-You will need to install the datasets (see the section "To obtain the data"
+You will need to install the datasets (see the section "To obtain the data")
 
 You will need to prepare a config file.
 
